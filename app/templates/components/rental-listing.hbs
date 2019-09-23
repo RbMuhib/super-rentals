@@ -1,10 +1,5 @@
 <article class="listing">
-
-  <a
-    onclick={{action "toggleImageSize"}}
-    class="image {{if this.isWide "wide"}}"
-    role="button"
-  >
+  <a onclick={{action 'toggleImageSize'}} class="image {{if this.isWide "wide"}}">
     <img src={{this.rental.image}} alt="">
     <small>View Larger</small>
   </a>
@@ -14,7 +9,7 @@
       <span>Owner:</span> {{this.rental.owner}}
     </div>
     <div class="detail type">
-      <span>Type:</span> {{this.rental.category}}
+      <span>Type:</span> {{rental-property-type this.rental.category}} - {{this.rental.category}}
     </div>
     <div class="detail location">
       <span>Location:</span> {{this.rental.city}}
